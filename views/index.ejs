@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="/css/home.css">
+        
+       
+    </head>
+<body>
+
+    <h1 style="color: aqua;">This Can Be the  first time, We Are Uploading The File on the Server!</h1>
+
+    <ul>
+    <h2>Contact List</h2>
+    <% for(let i of contact_list) { %>
+      <li class="contact">
+          <div class="detail">
+            <p><%=i.name%></p>
+            <p><%=i.phone%></p>
+          </div>
+          
+          <a href="/delcon/?id=<%=i._id%>"    >   
+           <button id="delBtn">
+              #ClickMe#
+          </div>
+          </a>
+
+      </li>
+
+       <%  }%>
+</ul>
+   
+
+     <form action="/contact_display" method="post">
+       Name <input type="text"  name="name">
+      Number <input type="text"  name="number" >
+        <input type="submit" value="submit">
+
+
+     </form>
+
+
+     <script type="text/javascript" src="/javascript/home.js"></script>
+
+</body>
+ 
+
+
+    </html>
