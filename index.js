@@ -132,7 +132,7 @@ console.log(req.body);
 
  
 
-app.listen(1002,function(err)
+app.listen(1001,function(err)
 {
 
 
@@ -200,12 +200,12 @@ const simplegit=require('simple-git');
  
 
 
-const Date=moment().format();
+const Date=moment().subtract(1,'d').format();
 
 console.log(Date);
  
 
-const s=simplegit().add(['./index.js']).commit("commit",{'--date':Date});
+const s=simplegit().add(['./index.js']).commit("developing the shadow",{'--date':Date});
  
 console.log(s);
 
