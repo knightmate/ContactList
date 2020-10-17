@@ -132,7 +132,7 @@ console.log(req.body);
 
  
 
-app.listen(port,function(err)
+app.listen(1002,function(err)
 {
 
 
@@ -193,3 +193,22 @@ app.listen(port,function(err)
     
 });
 
+const moment=require('moment');
+const simplegit=require('simple-git');
+
+ 
+ 
+
+
+const Date=moment().format();
+
+console.log(Date);
+ 
+
+const s=simplegit().add(['./index.js']).commit("commit",{'--date':Date});
+ 
+console.log(s);
+
+  //.add(['./index.js']).commit("commit",{'--date':Date});
+
+ 
